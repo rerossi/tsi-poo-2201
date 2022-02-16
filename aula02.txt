@@ -1,0 +1,46 @@
+Programação orientada a objetos - POO 
+
+Utilizado para melhor organizaçao do código
+
+para um melhor trabalho colaborativo
+
+Software de qualidade é um software fácil para utilização do usuário e 
+fácil manutenção do desenvolvedor, que mantém a integridade dos dados, 
+que resolve um problema real.
+
+Paradigmas de Programação
+
+Classificação de Linguagens por suas caracteristicas, estruturação da linguagem
+
+Paradigma declarativo - decalração dos das propriedades do resultado, mas não como 
+calcula-lo exemplo SQL, Funcional/Logica
+
+Paradigma Imperativo - O programador instrui a máquina o que deve ser feito.
+exemplo POO/Procedural
+
+Multiparadigma - uso de paradigmas diferentes com a mesma linguagem
+Exemplo PHP, Python, C++
+
+Unified Modeling Language - UML 
+
+ linguagem-padrão para a elaboração da estrutura de projetos de software. Ela poderá 
+ ser empregada para a visualização, a construção e a documentação de 
+ artefatos que façam uso de sistemas complexos de software.
+
+ Uso incorreto
+
+ Projetar todas as partes com ele, achar que quem está iniciando na progração vai saber
+ projetarcom UML.
+
+ Diagrama de Classes
+
+ Principal componente da modelagem orientada a objetos
+
+
+
+
+
+
+
+
+
