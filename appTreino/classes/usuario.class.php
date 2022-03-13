@@ -10,37 +10,33 @@ Class Usuario implements Crud, iUsuario{
  private $senha;
  private $id_perfil;
 
- public function cadastrar(array $dados):bool{
+ public function criar(array $dados): bool {
+   echo "\n Criado Perfil";
+   return true;
+}
 
-    echo "produto cadastrado com sucesso";
- }
+public function apagar(int $id): bool {
+    echo "\n Apagado Perfil";
+    return true;
+}
 
- public function listar(int $id = null):array{
+public function editar(int $id, array $dados): bool {
+    echo "\n Editado Perfil $id";
+    return true;
+}
 
-    echo "produto listado com sucesso";
- }
+public function listar(int $id = null): array{
+    echo "\n Listado Perfil";
+    return [];
+}
 
- public function alterar(int $id, array $dados):bool{
-
-    echo "Produto alterado com sucesso";
- }
-
- public function deletar(int $id):bool{
-
-    echo "Produto deletado com sucesso";
- }
-
- public function acao(array $idProdutos):bool{
-
-
- }
+public function acao(array $idProdutos): bool{
+    echo "Ação genérica para usuários";
+    return true;
+}
 
 }
 
-$rodrigo = new Usuario;
-$rodrigo->cadastrar();
-$rodrigo->listar();
-$rodrigo->alterar();
-$rodrigo->deletar();
+
 
 

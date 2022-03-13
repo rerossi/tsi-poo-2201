@@ -2,11 +2,11 @@
 
 class Sessao {
 
-    private $id;
     private $id_usuario;
     private $dispositivo;
     private $localizacao;
-    private $lastupdate;
+    private $lastAction;
+
 
     public function login(){
 
