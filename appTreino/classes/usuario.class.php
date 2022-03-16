@@ -10,6 +10,13 @@ Class Usuario implements Crud, iUsuario{
  private $senha;
  private $id_perfil;
 
+ public function __construct(){
+
+     echo "construtor usuario";
+     return true;  
+
+}
+
  public function criar(array $dados): bool {
    echo "\n Criado Perfil";
    return true;
