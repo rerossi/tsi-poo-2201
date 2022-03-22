@@ -13,6 +13,8 @@ class Main {
         $this->cliente = new Cliente;
 
         $this->cliente->acao([]);
+
+        $this->cliente->executaXPTO();
     }
 }
 

@@ -16,7 +16,7 @@ class Main{
     }
 
     function novo($vetor):void{
-
+        //função php is_array, retorna true ou false
         if(is_array($vetor)){
 
         $this->produto->criar($vetor); 

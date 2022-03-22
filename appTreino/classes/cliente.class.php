@@ -8,8 +8,10 @@ class Cliente extends Usuario implements iUsuario {
 
     public function __construct(){
 
+        //deixa explicito a chamada da classe Usuario, sendo assim será executado 
+        //o método chamado em outro arquivo
         parent::__construct();
-        echo " construtor cliente";
+        echo " construtor da classe cliente";
 
     }
 
@@ -18,5 +20,9 @@ class Cliente extends Usuario implements iUsuario {
 
         echo "Executou açao do cliente";
         return true;
+    }
+
+    public function executaXPTO(){
+        $this->xpto();
     }
 }

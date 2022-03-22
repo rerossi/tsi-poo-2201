@@ -12,10 +12,17 @@ Class Usuario implements Crud, iUsuario{
 
  public function __construct(){
 
-     echo "construtor usuario";
+     echo "construtor da classe usuario";
      return true;  
 
 }
+
+//só quem herda a classe pode utiliza-la
+    //que no caso seria a classe Clientes
+    protected function xpto(){
+        echo "\n Método xpto";
+    }
+
 
  public function criar(array $dados): bool {
    echo "\n Criado Perfil";
