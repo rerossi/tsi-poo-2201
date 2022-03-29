@@ -1,6 +1,13 @@
 <?php
+//mesma coisa que o cd, ch =  change / dir = directory
+
+chdir(__DIR__);
+require_once 'usuario.class.php';
+require_once '../interfaces/usuario.interface.php';
+
 
 class Categoria implements Crud {
+
     private $id;
     private $nome;
 

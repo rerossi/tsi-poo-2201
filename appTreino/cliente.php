@@ -2,6 +2,8 @@
 
 require 'classes/cliente.class.php';
 
+//class main serve para inicializar o código e deixar o código organizado 
+//e não deixar ele procedural
 
 class Main {
 

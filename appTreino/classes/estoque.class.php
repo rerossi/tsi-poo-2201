@@ -1,5 +1,10 @@
 <?php
 
+chdir(__DIR__);
+require_once 'usuario.class.php';
+require_once '../interfaces/usuario.interface.php';
+
+
 class Estoque implements Crud {
     private $id;
     private $id_produto;
@@ -10,7 +15,7 @@ class Estoque implements Crud {
 
     public function __construct(Produto $objProd = null) {
     
-        if(is_array($objProd)){
+        if(is_object($objProd)){
             $this->produto = $objProd;
         }
     }
