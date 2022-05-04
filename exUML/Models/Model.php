@@ -4,6 +4,8 @@ include_once __DIR__ . '/../Config/bd.php';
 
 abstract class Model extends PDO
 {
+    protected string $table;
+    
     public function __construct()
     {
         if (!defined('DSN') || !defined('DB_USER') || !defined('DB_PASS')) {
@@ -19,7 +21,23 @@ abstract class Model extends PDO
 
     abstract function atualizar(int $id, array $dados): bool;
 
-    abstract function apagar(int $id): bool;
-
     abstract function listar(int $id = null): ?array; //:? siginifica q obrigatoriamente ira retornar um inteiro ou nulo
+
+    function apagar(int $id): bool
+    {
+        $stmt = $this->prepare("DELETE FROM {$this->table}
+                                WHERE id = :id");
+
+         $stmt->bindParam(':id', $id); 
+         
+         if($stmt->execute()){
+
+            return true;
+        }
+        else{
+    
+        return false;
+        }
+         
+    }
 }

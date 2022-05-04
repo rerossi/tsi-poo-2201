@@ -58,31 +58,30 @@ class Cliente extends Model
          
     }
 
-    function apagar(int $id): bool
-    {
-        $stmt = $this->prepare("DELETE FROM cliente
-                                WHERE id = :id");
-
-         $stmt->bindParam(':id', $id); 
-         
-         if($stmt->execute()){
-
-            return true;
-        }
-        else{
-    
-        return false;
-        }
-         
-    }
-    
 
     function listar(int $id = null): ?array
-    {
-        return null;
+    {   
+        if($id){
+
+            $stmt = $this->prepare('SELECT ID, Name, telefone FROM cliente WHERE id = :id');
+
+            $stmt->bindParam(':id' , $id);
+
+        }else{
+
+            $stmt = $this->prepare('SELECT id, Name, telefone FROM cliente');
+        }
+
+        $stmt->execute();
+
+        $lista =[];
+        
+        while($registro = $stmt->fetch(\PDO::FETCH_ASSOC)) {
+            
+            $lista[] = $registro;
+        }
+        
+        return $lista;
     }
 }
 
-$cliente = new Cliente;
-
-$cliente->apagar(1);
