@@ -21,7 +21,8 @@
             <?php
             foreach ($clientes as $cliente) {
 
-                echo "<tr>
+                echo 
+            "<tr>
                 <td>{$cliente['id']}</td>
                 <td>{$cliente['Name']}</td>
                 <td>{$cliente['totalAtivos']}</td>
@@ -33,8 +34,8 @@
         </tbody>
         <tfoot>
             <tr>
-                <td></td>
-                <td></td>
+                <td>Total</td>
+                <td><?= count($clientes) ?> clientes</td>
                 <td></td>
                 <td></td>
             </tr>
